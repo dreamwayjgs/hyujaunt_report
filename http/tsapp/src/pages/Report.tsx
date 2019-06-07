@@ -1,6 +1,7 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom'
 import queryString from 'query-string'
+import MapView from '../components/MapView'
 
 type TParams = {userid: string}
 
@@ -10,12 +11,12 @@ const Report = (props: RouteComponentProps<TParams>) => {
 
     return (
         <div>
-            User: {props.match.params.userid}
-            <h2>
-                Report Your Status!                
-            </h2>
+            <div className="userinfo">
+            User: {props.match.params.userid}            
             lat: {query.lat}
             lng: {query.lng}
+            </div>
+            <MapView />
         </div>
     );
 };

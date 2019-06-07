@@ -1,28 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route, Switch } from "react-router-dom";
-import { Home, Report } from '../pages';
+import { Home, Report, Nomatch } from '../pages';
+import Menu from '../components/Menu'
 
-class App extends Component {
-
-  state = {
-    lat: 37.5,
-    lng: 127.04
-  }
-
-  componentDidMount() {
-  }
-
-  render() {
-    return (
-      <div className="App">                
+//class App extends Component {
+const App = () => {
+  // render() {
+  return (
+    <div className="App">
+      <Menu></Menu>      
+      <Switch>
         <Route exact path="/" component={Home} />
-        <Switch>        
-          <Route path="/report/:userId" component={Report} />
-          <Route path="/report/" component={Report} />
-        </Switch>
-      </div>
-    );
-  }
+        <Route path="/report/:userId" component={Report} />
+        <Route path="/report/" component={Report} />
+        <Route component={Nomatch} />
+      </Switch>      
+    </div>
+  );
+  // }
 }
 
 export default App;
