@@ -2,6 +2,7 @@ import React from 'react';
 import { RouteComponentProps } from 'react-router-dom'
 import queryString from 'query-string'
 import MapView from '../components/MapView'
+import ReportForm from '../components/ReportForm'
 
 type TParams = {userid: string}
 
@@ -17,6 +18,7 @@ const Report = (props: RouteComponentProps<TParams>) => {
             lng: {query.lng}
             </div>
             <MapView />
+            <ReportForm />
         </div>
     );
 };
