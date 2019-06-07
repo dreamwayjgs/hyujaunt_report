@@ -1,0 +1,10 @@
+{
+    "extends": ["eslint:recommended"],
+    "defaultSeverity": "warning",
+    "linterOptions": {
+      "exclude": [
+        "config/**/*.js",
+        "node_modules/**/*.ts"
+      ]
+    }
+}
