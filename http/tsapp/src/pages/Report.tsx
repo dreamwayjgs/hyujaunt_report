@@ -13,7 +13,7 @@ const Report = (props: RouteComponentProps<TParams>) => {
     return (
         <div>
             <div className="userinfo">
-            URL: {props}
+            URL: {props.location}
             User: {props.match.params.userid}            
             lat: {query.lat}
             lng: {query.lng}
