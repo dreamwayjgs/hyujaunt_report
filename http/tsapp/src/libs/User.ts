@@ -5,9 +5,7 @@ class User {
     public currentLat: number
     public currentLng: number
     public isValid: boolean = false
-    
-    //lat, lng: 경복궁 (37.555589, 127.049051)
-    //lat, lng: 한양대ITBT (37.415858, 126.880064)
+           
     /**
      * 
      * @param userId Valid 한 유저 아이디여야 한다

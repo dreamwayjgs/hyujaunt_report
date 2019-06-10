@@ -30,7 +30,7 @@ const Report = (props: RouteComponentProps<{ userId: string, LatLng: string }>) 
     }
     return (
         <div>
-            <MapView lat={user.currentLat} lng={user.currentLng} />
+            <MapView centerLat={user.currentLat} centerLng={user.currentLng} />
             <UserInfo user={user} />
             <Survey user={user} />
         </div>
