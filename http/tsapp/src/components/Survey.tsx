@@ -1,10 +1,11 @@
 import React from 'react';
 import './Survey.css'
+import { IUserProps } from '../libs/User'
 
-class Survey extends React.PureComponent<{}, {}> {
+class Survey extends React.Component<IUserProps, {}> {
     render(){
         return(
-            <div className="surveyForm">
+            <div className={this.props.user.isValid ? "surveyForm" : "surveyForm usererror"}>
                 <div className="surveyNotice">설문조사 설명</div>                
                 <div className="surveyHead">1. 객관식 질문</div>
                 <div className="surveyBody">

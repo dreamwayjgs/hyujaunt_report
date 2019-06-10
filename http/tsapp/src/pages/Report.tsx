@@ -5,33 +5,36 @@ import MapView from '../components/MapView'
 import Survey from '../components/Survey'
 import UserInfo from '../components/UserInfo'
 import User from '../libs/User'
+import GeoUtils from '../libs/GeoUtils'
 
-const Report = (props: RouteComponentProps<{userId: string}>) => {           
-    if(props.match.params.userId){        
+const Report = (props: RouteComponentProps<{ userId: string, LatLng: string }>) => {
+    let user: User
+    console.log("Matches", props.match.params)
+    // Google Type LatLng (@lat,lng)
+    if (props.match.params.LatLng) {
+        let latLng = GeoUtils.parseCoord(props.match.params.LatLng)
+        user = new User(props.match.params.userId, latLng[0], latLng[1])
+    }
+    // Others
+    // Daum: Lat, Lng
+    // Korea Govern: MapY, MapX
+    else if (props.match.params.userId) {
         const query = queryString.parse(props.location.search)
-        console.log("QUERY", query, query.lat, query.lng)        
-        const user: User = new User(props.match.params.userId, Number(query.lat), Number(query.lng))
-        const lat = user.currentLat
-        const lng = user.currentLng
-        console.log(user.id, user.currentLat, user.currentLng)
-
-        return (
-            <div>
-                <MapView lat={lat} lng={lng}/>            
-                <UserInfo user={user}/>            
-                <Survey />
-            </div>
-        );
+        console.log("QUERY", query)
+        let latLng = GeoUtils.parseCoord(query)
+        user = new User(props.match.params.userId, latLng[0], latLng[1])        
     }
-    else{        
-        return (
-            <div>                
-                <p>유저 정보가 없습니다</p>
-            </div>
-        );
+    else {
+        console.log("유저에러")
+        user = new User("UserError",undefined, undefined, false)
     }
-
-    
+    return (
+        <div>
+            <MapView lat={user.currentLat} lng={user.currentLng} />
+            <UserInfo user={user} />
+            <Survey user={user} />
+        </div>
+    );
 };
 
 export default Report;

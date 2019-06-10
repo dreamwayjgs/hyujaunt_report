@@ -1,7 +1,7 @@
 declare var daum: any
 
 class DaumMap {
-    private map: any
+    private map: any    
 
     constructor(elem: string, lat: number, lng: number){
         this.map = new daum.maps.Map(document.getElementById(elem), {
@@ -45,10 +45,6 @@ export class MapApis {
         return icon
     }
    
-}
-
-class Marker {
-        
 }
 
 export interface IMarkerProps {

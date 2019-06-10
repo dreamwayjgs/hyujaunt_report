@@ -4,6 +4,10 @@
     table-layout: fixed;
 }
 
+.surveyForm.usererror{
+    display: none;
+}
+
 .surveyNotice {
     text-align: center;
     font-weight: bold;

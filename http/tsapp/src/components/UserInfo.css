@@ -2,6 +2,15 @@
     background: #B5B6EE;
 }
 
+.usererror{
+    background: red;
+    color: white;
+}
+
+.usererror > .userbody {
+    display: none;
+}
+
 .userhead{
     text-align: center;
     font-weight: bold;
