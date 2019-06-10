@@ -1,6 +1,6 @@
 import React from 'react';
 import './MapView.css'
-import Map, { MapApis, IMarkerProps } from '../lib/DaumMap' // 만약 다른 맵을 사용하고 싶다면 Default Map 에 맞춰서 클래스 작성
+import Map, { MapApis, IMarkerProps } from '../libs/DaumMap' // 만약 다른 맵을 사용하고 싶다면 Default Map 에 맞춰서 클래스 작성
 
 declare var daum: any
 

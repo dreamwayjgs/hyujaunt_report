@@ -4,7 +4,7 @@ import queryString from 'query-string'
 import MapView from '../components/MapView'
 import Survey from '../components/Survey'
 import UserInfo from '../components/UserInfo'
-import User from '../lib/User'
+import User from '../libs/User'
 
 const Report = (props: RouteComponentProps<{userId: string}>) => {           
     if(props.match.params.userId){        

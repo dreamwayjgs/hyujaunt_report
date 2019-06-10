@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { IUserProps as IProps } from '../lib/User'
+import { IUserProps as IProps } from '../libs/User'
 import './UserInfo.css'
 
 
