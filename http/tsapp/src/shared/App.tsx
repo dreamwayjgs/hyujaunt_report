@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
-import { Home, Report, Nomatch, UserStatus } from '../pages';
-import Header from '../components/Header'
+import { Home, Report, Nomatch, UserStatus } from 'pages';
+import Header from 'components/Header'
 
 //class App extends Component {
 const App = () => {

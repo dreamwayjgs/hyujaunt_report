@@ -39,7 +39,8 @@ class GeoUtils {
         }
         try {
             let position = new CoordParser(coordStr)
-            latLng = [Number(position.getLatitude()), Number(position.getLongitude())]            
+            latLng = [Number(position.getLatitude()), Number(position.getLongitude())]
+            console.log(latLng)
         }
         catch (e) {
             console.log("POSITION IS NOT VALID")

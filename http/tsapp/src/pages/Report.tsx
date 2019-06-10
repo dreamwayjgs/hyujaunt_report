@@ -1,11 +1,11 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom'
 import queryString from 'query-string'
-import MapView from '../components/MapView'
-import Survey from '../components/Survey'
-import UserInfo from '../components/UserInfo'
-import User from '../libs/User'
-import GeoUtils from '../libs/GeoUtils'
+import MapView from 'components/MapView'
+import Survey from 'components/Survey'
+import UserInfo from 'components/UserInfo'
+import User from 'libs/User'
+import GeoUtils from 'libs/GeoUtils'
 
 const Report = (props: RouteComponentProps<{ userId: string, LatLng: string }>) => {
     let user: User
