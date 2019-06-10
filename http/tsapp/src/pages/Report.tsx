@@ -2,26 +2,36 @@ import React from 'react';
 import { RouteComponentProps } from 'react-router-dom'
 import queryString from 'query-string'
 import MapView from '../components/MapView'
-import ReportForm from '../components/ReportForm'
+import Survey from '../components/Survey'
+import UserInfo from '../components/UserInfo'
+import User from '../lib/User'
 
-type TParams = {userid: string}
+const Report = (props: RouteComponentProps<{userId: string}>) => {           
+    if(props.match.params.userId){        
+        const query = queryString.parse(props.location.search)
+        console.log("QUERY", query, query.lat, query.lng)        
+        const user: User = new User(props.match.params.userId, Number(query.lat), Number(query.lng))
+        const lat = user.currentLat
+        const lng = user.currentLng
+        console.log(user.id, user.currentLat, user.currentLng)
 
-const Report = (props: RouteComponentProps<TParams>) => {
-    console.log(props)
-    const query = queryString.parse(props.location.search)
-
-    return (
-        <div>
-            <div className="userinfo">
-            URL: {window.location.href}
-            User: {props.match.params.userid}            
-            lat: {query.lat}
-            lng: {query.lng}
+        return (
+            <div>
+                <MapView lat={lat} lng={lng}/>            
+                <UserInfo user={user}/>            
+                <Survey />
             </div>
-            <MapView />
-            <ReportForm />
-        </div>
-    );
+        );
+    }
+    else{        
+        return (
+            <div>                
+                <p>유저 정보가 없습니다</p>
+            </div>
+        );
+    }
+
+    
 };
 
 export default Report;

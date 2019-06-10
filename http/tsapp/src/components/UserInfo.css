@@ -1,0 +1,25 @@
+.userinfo {    
+    background: #B5B6EE;
+}
+
+.userhead{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 0.4rem;
+    padding-bottom: 0.2rem;
+    font-size: 1.2rem;
+}
+.userbody{
+    display: table;
+    table-layout: fixed;
+    padding-bottom: 0.4rem;
+    width: 100%
+}
+
+.useritem{
+    color: black;    
+    text-align: center;    
+    display: table-cell;    
+    text-decoration: none;    
+    font-size: 1rem;
+}

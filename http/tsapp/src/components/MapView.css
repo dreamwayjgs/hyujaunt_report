@@ -1,0 +1,20 @@
+#map {
+    height: 40vh;
+}
+
+.mapInfo {
+    display: table;
+    table-layout: fixed;
+    background: #EEEDFF;
+    width: 100%
+}
+
+.mapInfoBody{
+    display: table-cell;
+    color: black;    
+    text-align: center;
+    text-decoration: none;    
+    padding-top: 0.1rem;    
+    padding-bottom: 0.1rem;        
+    font-size: 1rem;
+}

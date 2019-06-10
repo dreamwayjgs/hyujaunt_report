@@ -1,0 +1,47 @@
+.surveyForm {    
+    background: #EEEDFF;
+    display: table;
+    table-layout: fixed;
+}
+
+.surveyNotice {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.surveyHead{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 0.4rem;
+    padding-bottom: 0.2rem;
+    font-size: 1.1rem;
+}
+.surveyBody{    
+    display: table;
+    table-layout: fixed;
+    padding-top: 0.2rem;    
+    padding-bottom: 0.2rem;    
+    width: 100%
+}
+
+.surveyItem{
+    color: black;    
+    text-align: center;
+    padding-top: 0.2rem;       
+    padding-bottom: 0.2rem;    
+    text-decoration: none;    
+    font-size: 1rem;
+}
+
+.surveyItem.choice{
+    display: table-cell;    
+    color: black;    
+    text-align: center;
+    padding-top: 0.2rem;       
+    padding-bottom: 0.2rem;    
+    text-decoration: none;    
+    font-size: 1rem;
+}
